@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>EKB Travel</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo.png" rel="icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="starter-page-page">
+
+  <a href="https://wa.me/6287770318174?text=Halo%20EKB%20Travel,%20saya%20ingin%20memesan%20Travel."
+    class="whatsapp-float" target="_blank">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <h1 class="sitename">EKBTravel</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero" class="active">Home</a></li>
+          <li><a href="index.html#services">Layanan</a></li>
+          <li><a href="reservasi.html">Reservasi</a></li>
+          <li class="dropdown"><a href="#"><span>Rute Perjalanan</span> <i
+                class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li class="dropdown">
+                <a href="#"><span><i class="bi bi-chevron-left toggle-dropdown"></i> Jember</span></a>
+                <ul>
+                  <li><a href="jember-surabaya.html">Travel Jember Surabaya</a></li>
+                  <li><a href="jember-malang.html">Travel Jember Malang</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="index.html#faq-2">Syarat & Ketentuan</a></li>
+          <li><a href="index.html#contact">Kontak Kami</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Reservasi</li>
+          </ol>
+        </nav>
+        <h1>Reservasi </h1>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Starter Section Section -->
+    <section id="starter-section" class="starter-section section">
+
+      <div class="container" data-aos="fade-up">
+        <form id="bookingForm" onsubmit="return submitForm(event)">
+          <div class="mb-3">
+            <h1>Informasi Pemesan</h1>
+            <div class="row align-items-start">
+              <div class="col">
+                <label class="form-label"><i class="bi bi-person"></i> Nama Lengkap</label>
+                <input type="text" id="namaLengkap" class="form-control" placeholder="Nama Lengkap Anda" required>
+              </div>
+              <div class="col">
+                <label class="form-label"><i class="bi bi-telephone"></i> No Telepon</label>
+                <input type="text" id="noTelepon" class="form-control" placeholder="No Telepon Anda" required>
+              </div>
+              <div class="col">
+                <label class="form-label"><i class="bi bi-whatsapp"></i> Whatsapp</label>
+                <input type="text" id="whatsapp" class="form-control" placeholder="Whatsapp Anda" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <h1>Detail Pemesan</h1>
+            <div class="row align-items-start">
+              <div class="col">
+                <label class="form-label"><i class="bi bi-pin-map"></i> Rute Perjalanan</label>
+                <select id="rutePerjalanan" class="form-select" required>
+                  <option selected disabled>Pilih Rute</option>
+                  <option value="Travel Jember Surabaya">Travel Jember Surabaya</option>
+                  <option value="Travel Jember Malang">Travel Jember Malang</option>
+                  <option value="Travel Jember Juanda Surabaya">Travel Jember Juanda Surabaya</option>
+                </select>
+              </div>
+              <div class="col">
+                <label class="form-label"><i class="bi bi-calendar3"></i> Tanggal Pemberangkatan</label>
+                <input type="date" id="tanggalPemberangkatan" class="form-control" required>
+              </div>
+              <div class="col">
+                <label class="form-label"><i class="bi bi-clock"></i> Jam Pemberangkatan</label>
+                <input type="time" id="jamPemberangkatan" class="form-control" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <div class="row align-items-start">
+              <div class="col">
+                <label class="form-label"><i class="bi bi-card-list"></i> Jenis Layanan</label>
+                <select id="jenisLayanan" class="form-select" required>
+                  <option selected disabled>Pilih Jenis Layanan</option>
+                  <option value="Travel">Travel</option>
+                  <option value="Titipan Paket">Titipan Paket</option>
+                </select>
+              </div>
+              <div class="col">
+                <label class="form-label"><i class="bi bi-people-fill"></i> Jumlah Penumpang</label>
+                <select id="jumlahPenumpang" class="form-select" required>
+                  <option selected disabled>Pilih Jumlah Penumpang</option>
+                  <option value="1 Orang">1 Orang</option>
+                  <option value="2 Orang">2 Orang</option>
+                  <option value="3 Orang">3 Orang</option>
+                  <option value="4 Orang">4 Orang</option>
+                  <option value="5 Orang">5 Orang</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <div class="row align-items-start">
+              <div class="col">
+                <label class="form-label"><i class="bi bi-geo-alt"></i> Alamat Penjemputan</label>
+                <textarea class="form-control" placeholder="Alamat Penjemputan Anda" id="alamatPenjemputan"
+                  style="height: 50px" required></textarea>
+              </div>
+              <div class="col">
+                <label class="form-label"><i class="bi bi-geo-alt"></i> Alamat Tujuan</label>
+                <textarea class="form-control" placeholder="Alamat Tujuan Anda" id="alamatTujuan" style="height: 50px"
+                  required></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <div class="row align-items-start">
+              <div class="col">
+                <label class="form-label"><i class="bi bi-chat-dots"></i> Pesan Tambahan / Permintaan Khusus</label>
+                <textarea class="form-control" placeholder="Pesan Tambahan atau Permintaan Khusus" id="pesanTambahan"
+                  style="height: 80px"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tombol Submit -->
+          <button type="submit" class="btn btn-success" style="margin-left: 45%;">
+            <i class="bi bi-send"></i> Pesan
+          </button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id=" footer" class="footer light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="d-flex align-items-center">
+            <span class="sitename">EKB Travel</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>EKB Travel layanan Travel dengan pelayanan terbaik, dengan driver berpengalaman serta armada
+              yang aman dan nyaman. Kami siap melayani kebutuhan transportasi anda.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Informasi</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#home">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#services">Layanan</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Reservasi</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#faq-2">Syarat & Ketentuan</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Layanan Kami</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a>Travel</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a>Titipan Paket</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a>Reguler</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a>Drop Off</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <h4>Kontak Kami</h4>
+          <span> <i class="bi bi-geo-alt-fill"></i> Jl. Danau Maninjau Barat II B.3 B.23</span><br>
+          <span> <i class="bi bi-telephone-fill"></i> 087770318174</span><br>
+          <span> <i class="bi bi-envelope-at-fill"></i> EKBTravel@gmail.com</span>
+          <div class="social-links d-flex mt-3">
+            <a href="https://wa.me/6287770318174?text=Halo%20EKB%20Travel,%20saya%20ingin%20memesan%20Travel."
+              target="_blank"><i class="bi bi-whatsapp"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-google"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">EKB Travel</strong> <span>All Rights
+          Reserved</span></p>
+      <div class="credits">
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    function submitForm(event) {
+      event.preventDefault(); // Mencegah form submit default
+
+      // Validasi manual, karena required sudah cukup untuk HTML5
+      if (!document.getElementById("bookingForm").checkValidity()) {
+        alert("Harap isi semua field yang diperlukan.");
+        return false;
+      }
+
+      // Ambil nilai dari inputan
+      var namaLengkap = document.getElementById("namaLengkap").value;
+      var noTelepon = document.getElementById("noTelepon").value;
+      var whatsapp = document.getElementById("whatsapp").value;
+      var rutePerjalanan = document.getElementById("rutePerjalanan").value;
+      var tanggalPemberangkatan = document.getElementById("tanggalPemberangkatan").value;
+      var jamPemberangkatan = document.getElementById("jamPemberangkatan").value;
+      var jenisLayanan = document.getElementById("jenisLayanan").value;
+      var jumlahPenumpang = document.getElementById("jumlahPenumpang").value;
+      var alamatPenjemputan = document.getElementById("alamatPenjemputan").value;
+      var alamatTujuan = document.getElementById("alamatTujuan").value;
+      var pesanTambahan = document.getElementById("pesanTambahan").value;
+
+      // Nomor WhatsApp yang akan dituju (ganti dengan nomor WhatsApp kamu)
+      var nomorWa = "6287770318174";
+
+      // Buat pesan yang akan dikirim
+      var pesan = `Halo EKB Travel, saya ingin melakukan pemesanan:\n\n` +
+        `Nama Lengkap: ${namaLengkap}\n` +
+        `No Telepon: ${noTelepon}\n` +
+        `Whatsapp: ${whatsapp}\n` +
+        `Rute Perjalanan: ${rutePerjalanan}\n` +
+        `Tanggal Pemberangkatan: ${tanggalPemberangkatan}\n` +
+        `Jam Pemberangkatan: ${jamPemberangkatan}\n` +
+        `Jenis Layanan: ${jenisLayanan}\n` +
+        `Jumlah Penumpang: ${jumlahPenumpang}\n` +
+        `Alamat Penjemputan: ${alamatPenjemputan}\n` +
+        `Alamat Tujuan: ${alamatTujuan}\n` +
+        `Pesan Tambahan: ${pesanTambahan}`;
+
+      // Encode pesan agar sesuai dengan format URL
+      var encodedPesan = encodeURIComponent(pesan);
+
+      // URL WhatsApp API
+      var whatsappUrl = `https://api.whatsapp.com/send?phone=${nomorWa}&text=${encodedPesan}`;
+
+      // Redirect ke URL WhatsApp
+      window.open(whatsappUrl, '_blank');
+    }
+  </script>
+
+</body>
+
+</html>
