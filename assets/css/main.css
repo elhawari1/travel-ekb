@@ -16,7 +16,7 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #37517e; /* Color for headings, subheadings and title throughout the website */
-  --hijau-color: #06D001; /* Color for headings, subheadings and title throughout the website */
+  --hijau-color: #06d001; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #47b2e4; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --green-color: #50c878; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
@@ -52,7 +52,7 @@
   --background-color: #50c878;
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  --surface-color: #06D001;
+  --surface-color: #06d001;
   --contrast-color: #ffffff;
 }
 
@@ -668,13 +668,13 @@ h6 {
   padding: 20px 0;
 }
 
-.section-title h2 {
+.mobil .section-title h2 {
   font-size: 2em;
   text-align: center;
   margin-bottom: 10px;
 }
 
-.section-title p {
+.mobil .section-title p {
   font-size: 1.2em;
   text-align: center;
   color: #555;
@@ -686,20 +686,21 @@ h6 {
   align-items: center;
   height: 200px;
   margin: 0 15px;
-  /* Menambahkan margin horizontal untuk jarak antara item */
   padding: 0 5px;
-  /* Menambahkan padding untuk ruang tambahan */
 }
 
 .owl-carousel .item img {
   width: 100%;
-  /* Membuat gambar responsif */
   height: auto;
-  /* Mengatur tinggi otomatis untuk menjaga rasio aspek */
   max-height: 200px;
-  /* Maksimal tinggi gambar */
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.owl-carousel .item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Untuk perangkat mobile */
@@ -710,9 +711,7 @@ h6 {
 
   .owl-carousel .item {
     margin: 0 5px;
-    /* Mengurangi margin untuk perangkat mobile */
     padding: 0;
-    /* Menghapus padding untuk gambar di perangkat mobile */
   }
 }
 
