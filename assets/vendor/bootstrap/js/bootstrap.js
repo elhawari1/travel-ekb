@@ -1,8 +1,4 @@
-/*!
-  * Bootstrap v5.3.3 (https://getbootstrap.com/)
-  * Copyright 2011-2024 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
-  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-  */
+
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('@popperjs/core')) :
   typeof define === 'function' && define.amd ? define(['@popperjs/core'], factory) :
@@ -1778,7 +1774,6 @@
       super(element, config);
       this._popper = null;
       this._parent = this._element.parentNode; // dropdown wrapper
-      // TODO: v6 revert #37011 & change markup https://getbootstrap.com/docs/5.3/forms/input-group/
       this._menu = SelectorEngine.next(this._element, SELECTOR_MENU)[0] || SelectorEngine.prev(this._element, SELECTOR_MENU)[0] || SelectorEngine.findOne(SELECTOR_MENU, this._parent);
       this._inNavbar = this._detectNavbar();
     }
@@ -2034,7 +2029,6 @@
       }
       event.preventDefault();
 
-      // TODO: v6 revert #37011 & change markup https://getbootstrap.com/docs/5.3/forms/input-group/
       const getToggleButton = this.matches(SELECTOR_DATA_TOGGLE$3) ? this : SelectorEngine.prev(this, SELECTOR_DATA_TOGGLE$3)[0] || SelectorEngine.next(this, SELECTOR_DATA_TOGGLE$3)[0] || SelectorEngine.findOne(SELECTOR_DATA_TOGGLE$3, event.delegateTarget.parentNode);
       const instance = Dropdown.getOrCreateInstance(getToggleButton);
       if (isUpOrDownEvent) {
