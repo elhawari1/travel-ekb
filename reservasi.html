@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>EKB Travel</title>
-  <meta name="description" content="Travel Jember dengan rute ke Surabaya, Malang, Denpasar. Layanan 24 jam, harga terjangkau. Carter travel Jember dan sewa mobil tersedia.">
+  <meta name="description"
+    content="Travel Jember dengan rute ke Surabaya, Malang, Denpasar. Layanan 24 jam, harga terjangkau. Carter travel Jember dan sewa mobil tersedia.">
   <meta name="keywords" content="travel jember surabaya, travel murah jember, carter travel jember">
 
   <!-- Favicons -->
@@ -82,7 +83,7 @@
         </nav>
         <h1>Reservasi </h1>
       </div>
-    </div><!-- End Page Title -->
+    </div>
 
     <!-- Starter Section Section -->
     <section id="starter-section" class="starter-section section">
@@ -92,15 +93,15 @@
           <div class="mb-3">
             <h2>Informasi Pemesan</h2>
             <div class="row align-items-start">
-              <div class="col">
+              <div class="col-12 col-md-4 mb-3">
                 <label class="form-label"><i class="bi bi-person"></i> Nama Lengkap</label>
                 <input type="text" id="namaLengkap" class="form-control" placeholder="Nama Lengkap Anda" required>
               </div>
-              <div class="col">
+              <div class="col-12 col-md-4 mb-3">
                 <label class="form-label"><i class="bi bi-telephone"></i> No Telepon</label>
                 <input type="number" id="noTelepon" class="form-control" placeholder="No Telepon Anda" required>
               </div>
-              <div class="col">
+              <div class="col-12 col-md-4 mb-3">
                 <label class="form-label"><i class="bi bi-whatsapp"></i> Whatsapp</label>
                 <input type="number" id="whatsapp" class="form-control" placeholder="Whatsapp Anda" required>
               </div>
@@ -110,7 +111,7 @@
           <div class="mb-3 pt-3">
             <h2>Detail Pemesan</h2>
             <div class="row align-items-start">
-              <div class="col">
+              <div class="col-12 col-md-4 mb-3">
                 <label class="form-label"><i class="bi bi-pin-map"></i> Rute Perjalanan</label>
                 <select id="rutePerjalanan" class="form-select" required>
                   <option selected disabled>Pilih Rute</option>
@@ -119,11 +120,11 @@
                   <option value="Travel Jember Juanda Surabaya">Travel Jember Juanda Surabaya</option>
                 </select>
               </div>
-              <div class="col">
+              <div class="col-12 col-md-4 mb-3">
                 <label class="form-label"><i class="bi bi-calendar3"></i> Tanggal Pemberangkatan</label>
                 <input type="date" id="tanggalPemberangkatan" class="form-control" required>
               </div>
-              <div class="col">
+              <div class="col-12 col-md-4 mb-3">
                 <label class="form-label"><i class="bi bi-clock"></i> Jam Pemberangkatan</label>
                 <input type="time" id="jamPemberangkatan" class="form-control" required>
               </div>
@@ -132,7 +133,7 @@
 
           <div class="mb-3">
             <div class="row align-items-start">
-              <div class="col">
+              <div class="col-12 col-md-6 mb-3">
                 <label class="form-label"><i class="bi bi-card-list"></i> Jenis Layanan</label>
                 <select id="jenisLayanan" class="form-select" required>
                   <option selected disabled>Pilih Jenis Layanan</option>
@@ -140,7 +141,7 @@
                   <option value="Titipan Paket">Titipan Paket</option>
                 </select>
               </div>
-              <div class="col">
+              <div class="col-12 col-md-6 mb-3">
                 <label class="form-label"><i class="bi bi-people-fill"></i> Jumlah Penumpang</label>
                 <select id="jumlahPenumpang" class="form-select" required>
                   <option selected disabled>Pilih Jumlah Penumpang</option>
@@ -156,12 +157,12 @@
 
           <div class="mb-3">
             <div class="row align-items-start">
-              <div class="col">
+              <div class="col-12 col-md-6 mb-3">
                 <label class="form-label"><i class="bi bi-geo-alt"></i> Alamat Penjemputan</label>
                 <textarea class="form-control" placeholder="Alamat Penjemputan Anda" id="alamatPenjemputan"
                   style="height: 50px" required></textarea>
               </div>
-              <div class="col">
+              <div class="col-12 col-md-6 mb-3">
                 <label class="form-label"><i class="bi bi-geo-alt"></i> Alamat Tujuan</label>
                 <textarea class="form-control" placeholder="Alamat Tujuan Anda" id="alamatTujuan" style="height: 50px"
                   required></textarea>
@@ -171,7 +172,7 @@
 
           <div class="mb-3">
             <div class="row align-items-start">
-              <div class="col">
+              <div class="col-12 mb-3">
                 <label class="form-label"><i class="bi bi-chat-dots"></i> Pesan Tambahan / Permintaan Khusus</label>
                 <textarea class="form-control" placeholder="Pesan Tambahan atau Permintaan Khusus" id="pesanTambahan"
                   style="height: 80px"></textarea>
@@ -179,12 +180,12 @@
             </div>
           </div>
 
-          <!-- Tombol Submit -->
-          <button type="submit" class="btn btn-success" style="margin-left: 45%;">
+          <button type="submit" class="btn btn-success" style="width: 100%;">
             <i class="bi bi-send"></i> Pesan
           </button>
         </form>
       </div>
+
     </section>
 
   </main>
